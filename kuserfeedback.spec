@@ -91,13 +91,13 @@ Header files for development with %{name}.
 
 %prep
 %autosetup -p1
+%cmake_kde5
 
 %build
-%cmake_kde5
-%ninja_build
+%ninja_build -C build
 
 %install
-%ninja_install
+%ninja_install -C build
 
 %find_lang userfeedbackconsole5_qt
 %find_lang userfeedbackprovider5_qt
