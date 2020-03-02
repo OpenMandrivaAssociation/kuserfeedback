@@ -18,6 +18,7 @@ BuildRequires:	pkgconfig(Qt5Sql)
 BuildRequires:	pkgconfig(Qt5Svg)
 BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:	qt5-assistant
 BuildRequires:	bison
 BuildRequires:	flex
 
