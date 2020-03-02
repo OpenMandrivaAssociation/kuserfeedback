@@ -26,7 +26,7 @@ BuildRequires:	flex
 Framework for collecting user feedback for applications via telemetry
 and surveys.
 
-%files -f userfeedbackconsole5_qt.lang -f userfeedbackprovider5_qt.lang
+%files -f %{name}.lang
 %{_kde5_sysconfdir}/xdg/org_kde_UserFeedback.categories
 %{_kde5_bindir}/UserFeedbackConsole
 %{_kde5_bindir}/userfeedbackctl
@@ -99,5 +99,4 @@ Header files for development with %{name}.
 %install
 %ninja_install -C build
 
-%find_lang userfeedbackconsole5_qt
-%find_lang userfeedbackprovider5_qt
+%find_lang %{name} --with-man --with-qt --all-name
