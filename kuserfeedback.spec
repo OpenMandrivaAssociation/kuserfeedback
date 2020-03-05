@@ -32,7 +32,6 @@ and surveys.
 %{_kde5_bindir}/userfeedbackctl
 %{_kde5_qmldir}/org/kde/userfeedback/
 %{_kde5_applicationsdir}/UserFeedbackConsole.desktop
-%{_kde5_datadir}/KDE/UserFeedbackConsole/
 
 #---------------------------------------------
 
