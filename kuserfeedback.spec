@@ -1,6 +1,6 @@
 Name:		kuserfeedback
 Version:	1.0.0
-Release:	1
+Release:	2
 Summary:	Framework for collecting user feedback for applications via telemetry and surveys
 License:	GPLv2+
 Group:		Development/KDE and Qt
@@ -28,11 +28,22 @@ and surveys.
 
 %files
 %{_kde5_sysconfdir}/xdg/org_kde_UserFeedback.categories
-%{_kde5_bindir}/UserFeedbackConsole
 %{_kde5_bindir}/userfeedbackctl
 %{_kde5_qmldir}/org/kde/userfeedback/
+%{_datadir}/locale/*/LC_MESSAGES/userfeedbackprovider5_qt.qm
+
+%package console
+Summary:	Application for viewing feedback collected by kuserfeedback
+Group:		Development/KDE and Qt
+
+%description console
+Application for viewing feedback collected by kuserfeedback
+
+%files console
+%{_kde5_bindir}/UserFeedbackConsole
 %{_kde5_applicationsdir}/UserFeedbackConsole.desktop
-%{_kde5_datadir}/locale/*/LC_MESSAGES/*.qm
+%{_datadir}/KDE/UserFeedbackConsole
+%{_datadir}/locale/*/LC_MESSAGES/userfeedbackconsole5_qt.qm
 
 #---------------------------------------------
 
@@ -98,6 +109,3 @@ Header files for development with %{name}.
 
 %install
 %ninja_install -C build
-# (tpg) 2020-03-05 seems to be broken
-# BUILDSTDERR: error: Unusual locale length: "LC_MESSAGES/userfeedbackprovider5_qt" in %lang(LC_MESSAGES/userfeedbackprovider5_qt)
-#find_lang %{name} --with-man --with-qt --all-name
