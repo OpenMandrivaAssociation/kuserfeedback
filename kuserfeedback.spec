@@ -21,6 +21,7 @@ BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	qt5-assistant
 BuildRequires:	bison
 BuildRequires:	flex
+BuildRequires:	qdoc5
 
 %description
 Framework for collecting user feedback for applications via telemetry
