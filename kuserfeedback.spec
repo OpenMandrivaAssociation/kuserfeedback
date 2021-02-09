@@ -21,6 +21,7 @@ BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	qt5-assistant
 BuildRequires:	bison
 BuildRequires:	flex
+BuildRequires:	qdoc5
 
 %description
 Framework for collecting user feedback for applications via telemetry
@@ -37,12 +38,14 @@ Summary:	Application for viewing feedback collected by kuserfeedback
 Group:		Development/KDE and Qt
 
 %description console
-Application for viewing feedback collected by kuserfeedback
+Application for viewing feedback collected by kuserfeedback.
 
 %files console
 %{_kde5_bindir}/UserFeedbackConsole
 %{_kde5_applicationsdir}/UserFeedbackConsole.desktop
-%{_datadir}/KDE/UserFeedbackConsole
+%dir %{_datadir}/KDE/UserFeedbackConsole
+%{_datadir}/KDE/UserFeedbackConsole/*.qhc
+%{_datadir}/KDE/UserFeedbackConsole/*.qch
 %{_datadir}/locale/*/LC_MESSAGES/userfeedbackconsole5_qt.qm
 
 #---------------------------------------------
