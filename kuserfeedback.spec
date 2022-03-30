@@ -1,6 +1,6 @@
 Name:		kuserfeedback
-Version:	1.0.0
-Release:	2
+Version:	1.2.0
+Release:	1
 Summary:	Framework for collecting user feedback for applications via telemetry and surveys
 License:	GPLv2+
 Group:		Development/KDE and Qt
@@ -28,9 +28,9 @@ Framework for collecting user feedback for applications via telemetry
 and surveys.
 
 %files
-%{_kde5_sysconfdir}/xdg/org_kde_UserFeedback.categories
+%{_kde5_datadir}/qlogging-categories5/org_kde_UserFeedback.categories
 %{_kde5_bindir}/userfeedbackctl
-%{_kde5_qmldir}/org/kde/userfeedback/
+%{_kde5_qmldir}/org/kde/userfeedback
 %{_datadir}/locale/*/LC_MESSAGES/userfeedbackprovider5_qt.qm
 
 %package console
@@ -42,7 +42,8 @@ Application for viewing feedback collected by kuserfeedback.
 
 %files console
 %{_kde5_bindir}/UserFeedbackConsole
-%{_kde5_applicationsdir}/UserFeedbackConsole.desktop
+%{_kde5_applicationsdir}/org.kde.kuserfeedback-console.desktop
+%{_kde5_datadir}/metainfo/org.kde.kuserfeedback-console.appdata.xml
 %dir %{_datadir}/KDE/UserFeedbackConsole
 %{_datadir}/KDE/UserFeedbackConsole/*.qhc
 %{_datadir}/KDE/UserFeedbackConsole/*.qch
