@@ -1,6 +1,6 @@
 Name:		kuserfeedback
 Version:	1.2.0
-Release:	2
+Release:	3
 Summary:	Framework for collecting user feedback for applications via telemetry and surveys
 License:	GPLv2+
 Group:		Development/KDE and Qt
@@ -22,6 +22,8 @@ BuildRequires:	qt5-assistant
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	qdoc5
+# We get the translations from the qt6 version so the packages can coexist
+Suggests:	kuserfeedback-translations
 
 %description
 Framework for collecting user feedback for applications via telemetry
@@ -31,7 +33,6 @@ and surveys.
 %{_kde5_datadir}/qlogging-categories5/org_kde_UserFeedback.categories
 %{_kde5_bindir}/userfeedbackctl
 %{_kde5_qmldir}/org/kde/userfeedback
-%{_datadir}/locale/*/LC_MESSAGES/userfeedbackprovider5_qt.qm
 
 %package console
 Summary:	Application for viewing feedback collected by kuserfeedback
@@ -47,7 +48,6 @@ Application for viewing feedback collected by kuserfeedback.
 %dir %{_datadir}/KDE/UserFeedbackConsole
 %{_datadir}/KDE/UserFeedbackConsole/*.qhc
 %{_datadir}/KDE/UserFeedbackConsole/*.qch
-%{_datadir}/locale/*/LC_MESSAGES/userfeedbackconsole5_qt.qm
 
 #---------------------------------------------
 
@@ -113,3 +113,5 @@ Header files for development with %{name}.
 
 %install
 %ninja_install -C build
+# We get the translations from the qt6 version so the packages can coexist
+rm -rf %{buildroot}%{_datadir}/locale
