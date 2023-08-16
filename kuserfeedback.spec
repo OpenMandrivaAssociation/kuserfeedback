@@ -46,9 +46,9 @@ Application for viewing feedback collected by kuserfeedback.
 %{_kde5_bindir}/UserFeedbackConsole
 %{_kde5_applicationsdir}/org.kde.kuserfeedback-console.desktop
 %{_kde5_datadir}/metainfo/org.kde.kuserfeedback-console.appdata.xml
-%dir %{_datadir}/KDE/UserFeedbackConsole
-%{_datadir}/KDE/UserFeedbackConsole/*.qhc
-%{_datadir}/KDE/UserFeedbackConsole/*.qch
+%optional %dir %{_datadir}/KDE/UserFeedbackConsole
+%optional %{_datadir}/KDE/UserFeedbackConsole/*.qhc
+%optional %{_datadir}/KDE/UserFeedbackConsole/*.qch
 
 #---------------------------------------------
 
