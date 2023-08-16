@@ -22,6 +22,7 @@ BuildRequires:	qt5-assistant
 BuildRequires:	bison
 BuildRequires:	flex
 BuildRequires:	qdoc5
+BuildRequires:	php-cli
 # We get the translations from the qt6 version so the packages can coexist
 Suggests:	kuserfeedback-translations
 
@@ -106,7 +107,8 @@ Header files for development with %{name}.
 
 %prep
 %autosetup -p1
-%cmake_kde5
+%cmake_kde5 \
+	-DQT_INSTALL_DOCS=%{_docdir}/qt5
 
 %build
 %ninja_build -C build
