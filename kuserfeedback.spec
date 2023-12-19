@@ -1,6 +1,6 @@
 Name:		kuserfeedback
-Version:	1.2.0
-Release:	3
+Version:	1.3.0
+Release:	1
 Summary:	Framework for collecting user feedback for applications via telemetry and surveys
 License:	GPLv2+
 Group:		Development/KDE and Qt
